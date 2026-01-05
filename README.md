@@ -36,67 +36,85 @@ ls docs/advanced-commands/
 ```
 devops-shell-arsenal/
 ├── docs/
-│   ├── advanced-commands/        # Master powerful commands
-│   │   ├── awk-mastery.md       # AWK for data processing
-│   │   ├── sed-advanced.md      # Advanced text transformations
-│   │   ├── jq-json-kung-fu.md   # JSON manipulation mastery
-│   │   ├── grep-performance.md   # High-performance searching
-│   │   └── find-xargs-power.md  # Parallel processing patterns
+│   ├── advanced-commands/        # Linux command mastery
+│   │   ├── awk-mastery.md       # AWK data processing
+│   │   ├── sed-advanced.md      # Text transformations
+│   │   ├── jq-json-kung-fu.md   # JSON manipulation
+│   │   ├── grep-performance.md   # GREP & ripgrep
+│   │   ├── find-xargs-power.md  # Parallel processing
+│   │   ├── systemctl-journalctl.md  # Service management
+│   │   ├── ssh-networking.md    # SSH tunneling & networking
+│   │   └── docker-commands.md   # Container operations
+│   ├── cloud-guides/            # Cloud CLI mastery
+│   │   ├── aws/                 # AWS CLI patterns
+│   │   └── gcp/                 # GCP gcloud patterns
 │   └── best-practices.md
 ├── examples/
-│   ├── log-analysis/             # Production log analysis
-│   ├── cloud-automation/         # AWS, GCP, Azure automation
-│   ├── kubernetes/               # kubectl and k8s utilities
-│   ├── cicd/                     # CI/CD pipeline helpers
-│   ├── monitoring/               # Metrics and alerting
-│   ├── security/                 # Security scanning & compliance
-│   ├── performance/              # Performance troubleshooting
-│   ├── backup-recovery/          # Backup & DR automation
-│   └── incident-response/        # On-call utilities
-└── templates/                    # Reusable script templates
+│   ├── cloud-automation/        # Cloud-specific scripts
+│   │   ├── aws/                 # AWS automation
+│   │   │   ├── cost-optimization/
+│   │   │   ├── security/
+│   │   │   └── automation/
+│   │   ├── gcp/                 # GCP automation
+│   │   │   ├── cost-optimization/
+│   │   │   ├── security/
+│   │   │   └── automation/
+│   │   └── azure/               # Azure automation
+│   │       ├── cost-optimization/
+│   │       ├── security/
+│   │       └── backup/
+│   ├── log-analysis/            # Log parsing & analysis
+│   ├── kubernetes/              # K8s utilities
+│   ├── security/                # Security tools
+│   └── ...
+└── templates/                   # Script templates
 ```
 
-## 🚀 Featured Examples
+## 🚀 Featured Content
 
-### Log Analysis
+### Log Analysis Scripts
 - **[Error Spike Detector](examples/log-analysis/error-spike-detector.sh)** - Real-time 5xx error rate monitoring
 - **[Multi-Service Correlator](examples/log-analysis/multi-service-correlator.sh)** - Correlate logs across microservices by trace ID
-- **[Slow Query Analyzer](examples/log-analysis/slow-query-analyzer.sh)** - Parse and rank slow database queries
 
-### Cloud Automation
-- **[Unused Resource Cleaner](examples/cloud-automation/aws-unused-resources.sh)** - Find and delete unused AWS resources
-- **[Cost Anomaly Detector](examples/cloud-automation/cost-anomaly-detector.sh)** - Alert on unusual cloud spending
-- **[Cross-Account Resource Inventory](examples/cloud-automation/aws-cross-account-inventory.sh)** - Inventory resources across all accounts
+### AWS Automation
+- **[Unused Resources](examples/cloud-automation/aws/cost-optimization/aws-unused-resources.sh)** - Find and delete unused AWS resources
+- **[Security Audit](examples/cloud-automation/aws/security/aws-security-audit.sh)** - Comprehensive security checks (S3, EC2, IAM, RDS)
+- **[Snapshot Cleanup](examples/cloud-automation/aws/cost-optimization/snapshot-cleanup.sh)** - Clean up old EBS snapshots
+- **[Instance Scheduler](examples/cloud-automation/aws/automation/instance-scheduler.sh)** - Auto start/stop instances by tags
+
+### GCP Automation
+- **[Unused Disks](examples/cloud-automation/gcp/cost-optimization/unused-disks.sh)** - Find and delete unattached persistent disks
+- **[Firewall Audit](examples/cloud-automation/gcp/security/firewall-audit.sh)** - Audit firewall rules for security issues
+- **[GKE Autoscale](examples/cloud-automation/gcp/automation/gke-autoscale.sh)** - Configure GKE node pool autoscaling
+
+### Azure Automation
+- **[Unused Resources](examples/cloud-automation/azure/cost-optimization/unused-resources.sh)** - Find unused Azure resources (disks, IPs, NSGs)
+- **[NSG Audit](examples/cloud-automation/azure/security/nsg-audit.sh)** - Audit network security groups
+- **[VM Backup](examples/cloud-automation/azure/backup/vm-backup.sh)** - Automated VM backups
 
 ### Kubernetes
-- **[Pod Restart Analyzer](examples/kubernetes/pod-restart-analyzer.sh)** - Identify patterns in pod restarts
-- **[Resource Right-Sizer](examples/kubernetes/resource-right-sizer.sh)** - Suggest optimal resource requests based on usage
-- **[CrashLoopBackOff Debugger](examples/kubernetes/crashloop-debugger.sh)** - Automated CrashLoopBackOff troubleshooting
-
-### CI/CD
-- **[Blue-Green Deployment](examples/cicd/blue-green-deploy.sh)** - Automated blue-green deployment script
-- **[Canary Monitor](examples/cicd/canary-monitor.sh)** - Monitor canary deployment metrics
-- **[Artifact Promoter](examples/cicd/artifact-promoter.sh)** - Multi-environment artifact promotion
+- **[Pod Restart Analyzer](examples/kubernetes/pod-restart-analyzer.sh)** - Identify patterns in pod restarts and troubleshoot issues
 
 ### Security
-- **[Secret Scanner](examples/security/secret-scanner.sh)** - Scan for exposed secrets in logs and configs
 - **[Certificate Monitor](examples/security/cert-monitor.sh)** - Monitor SSL certificate expiry across services
-- **[Security Group Auditor](examples/security/sg-auditor.sh)** - Audit AWS security groups for overly permissive rules
 
-### Performance
-- **[Resource Hog Hunter](examples/performance/resource-hog-hunter.sh)** - Identify top CPU/memory consumers
-- **[Disk I/O Analyzer](examples/performance/disk-io-analyzer.sh)** - Detect disk I/O bottlenecks
-- **[Network Troubleshooter](examples/performance/network-troubleshooter.sh)** - Comprehensive network connectivity testing
+## 📖 Linux Command Mastery Guides
 
-## 📖 Advanced Command Mastery
+Essential command guides for DevOps engineers:
 
-Deep dives into the most powerful shell commands:
+- **[AWK Mastery](docs/advanced-commands/awk-mastery.md)** - Data processing, log analysis, custom reports
+- **[SED Advanced](docs/advanced-commands/sed-advanced.md)** - Text transformations, config automation
+- **[JQ JSON Kung Fu](docs/advanced-commands/jq-json-kung-fu.md)** - JSON manipulation, cloud CLI parsing
+- **[GREP Performance](docs/advanced-commands/grep-performance.md)** - Fast log searching with grep/ripgrep  
+- **[Find + Xargs Power](docs/advanced-commands/find-xargs-power.md)** - Parallel processing, bulk operations
+- **[systemctl & journalctl](docs/advanced-commands/systemctl-journalctl.md)** - Service management, log querying
+- **[SSH & Networking](docs/advanced-commands/ssh-networking.md)** - Tunneling, ProxyJump, troubleshooting
+- **[Docker Commands](docs/advanced-commands/docker-commands.md)** - Container operations, production patterns
 
-- **[AWK Mastery](docs/advanced-commands/awk-mastery.md)** - Multi-file processing, custom reports, data transformation
-- **[SED Advanced](docs/advanced-commands/sed-advanced.md)** - Complex text transformations, in-place editing at scale
-- **[JQ JSON Kung Fu](docs/advanced-commands/jq-json-kung-fu.md)** - Advanced JSON manipulation, API response parsing
-- **[GREP Performance](docs/advanced-commands/grep-performance.md)** - Performance-optimized searching techniques
-- **[Find + Xargs Power](docs/advanced-commands/find-xargs-power.md)** - Parallel processing patterns
+## ☁️ Cloud CLI Guides
+
+- **[AWS CLI Mastery](docs/cloud-guides/aws/aws-cli-mastery.md)** - Production AWS patterns
+- **[GCP gcloud Mastery](docs/cloud-guides/gcp/gcloud-mastery.md)** - Google Cloud operations
 
 ## 🎓 Learning Path
 
